@@ -1,0 +1,398 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    font-family: sans-serif;
+    background: linear-gradient(to left, #000000ca,#000000ca), url(fond.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    position: relative;
+}
+.center{
+    width: 60%;
+    position: relative;
+}
+.center img{
+    position: absolute;
+    top: 130px;
+    right: -320px;
+    z-index: 1;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 10px;
+}
+.right{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.top, .buttom{
+    height: 50%;
+    background-color: #ffa600cc;
+}
+.top{
+    border-bottom-left-radius: 300px ;
+    position: relative;
+    overflow: hidden;
+}
+.buttom{
+    border-top-left-radius: 300px ;
+    position: relative;
+}
+.actif{
+    color: white;
+}
+
+
+
+
+/* premier partie, header  */
+header{
+    color: orange;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+header span{
+    color: white;
+}
+header ul{
+    display: flex;
+    list-style: none;
+}
+header li{
+    padding:0 20px;
+}
+header li a{
+    color: orange;
+    text-decoration: none;
+    position: relative;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+header li a::before{
+    content: '';
+    position: absolute;
+    background-color: white;
+    height: 3px;
+    top: 18px;
+    width: 0;
+    left: 8px;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+header li a:hover::before, header a:hover{
+    width: 60%;
+    color: white;
+}
+
+/* le titre qui est en grand */
+.titre{
+    color: white;
+    height: 300px;
+    text-align: center;
+    padding-top: 120px;
+}
+.titre h1{
+    font-size: 70px;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: -7px;
+}.titre h3{
+    font-style: italic;
+    padding: 5px;
+}.titre h4{
+    color: orange;
+    font-style: italic;
+    padding-bottom: 20px;
+}.titre button{
+    border: 2px solid white;
+    background: none;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 20px;
+}
+
+
+
+
+/* la partie recherche */
+.menu form{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.456);
+    border-radius: 30px;
+    padding: 4px 0;
+    overflow: hidden;
+    background-color: white;
+ }
+.menu form input{
+    border: none;
+    padding: 3px 10px;
+    outline: none;
+ }
+.menu form button{
+    border: none;
+    background: none;
+    padding: 5px;
+    cursor: pointer;
+ }
+.menu form a{
+    color: black;
+    background-color: orange;
+    padding: 10px 13px;
+    border-radius: 50%;
+ }
+
+ /* bsdg */
+
+.menu{
+    float: right;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+}
+.menu input{
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 0 9px #0000003b;
+    width: 80%;
+    outline-color: #ffa600cc;
+    display: none;
+}
+.menu input.active{
+    display: inline;
+}
+.menu label, .menu i{
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+
+/* partie de la barre de menu */
+.liste{
+    position: absolute;
+    right: 0px;
+    top: 45px;
+    background-color: white;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0 0 9px #000000ca;
+    display: none;
+}
+.liste.on{
+    display: block;
+    right: 0;
+    animation: on 0.5s ease;
+}
+@keyframes on{
+    from{
+        right: -130px;
+    }
+    to{
+        right: 0;
+    }
+}
+
+
+.user{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+}.user i{
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 2px;
+    cursor: pointer;
+}.liste h5{
+    padding: 3px 30px;
+    margin: 3px;
+    cursor: pointer;
+}.liste h5:hover{
+    color: #ffa600cc;
+}
+.liste h6{
+    padding:0 5px;
+}
+#utilisateur:hover{
+    color: orange;
+    box-shadow: 0 0 9px #0000003b;
+    border: 1px solid orange;
+}
+
+
+/* liste de reseaux sociaux */
+.nav{
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    top: -100px;
+    padding: 5px 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0 0 9px #0000003b;
+}
+.nav i{
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+/* la partie ou on montre une casse de l'utilisateur */
+#mini_page{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: none;
+}#mini_page.ok{
+    display: block;
+}
+.floue{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff90;
+}
+.compte{
+    background-color: white;
+    width: 50%;
+    height: 60%;
+    z-index: 1;
+    border-radius: 30px;
+    box-shadow: 0 0 10px black;
+    display: flex;
+    overflow: hidden;
+}
+.slader{
+    width:60%;
+    position: relative;
+}
+.contenue{
+    width: 40%;
+}
+
+/* la partie slider */
+.slader img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: 1s;
+}
+.slader img.open{
+    opacity: 1;
+}
+.bbt{
+    z-index: 1;
+    position: absolute;
+    bottom: 10px;
+    left: 150px;
+    display: flex;
+}
+.bouton_sp{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ffffff60;
+    margin: 3px;
+    cursor: pointer;
+    transition: 1s;
+}
+.bouton_sp.openb{
+    background: white;
+}
+
+
+
+/* retour */
+.retour{
+    text-align: end;
+    padding: 10px 20px;
+}
+.retour i{
+    background-color: orange;
+    padding: 3px;
+    border-radius: 50%;
+    cursor: pointer;    
+}
+.retour i:hover{
+    color: white;
+    box-shadow: 0 0 5px #00000073;
+}
+
+
+
+
+/* la partie contenue */
+#header{
+    border-radius: 30px;
+    box-shadow: 0 0 10px #00000073;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin:0 5px;
+}
+#header i{
+    padding:0 10px;
+    font-size: 30px;
+}
+
+
+/* deuxieme */
+.aside{
+    padding: 10px 25px;
+    position: relative;
+}
+.aside div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.aside img{
+    position: absolute;
+    right: 16px;
+    top:1px;
+}
+.aside h4{
+    cursor: pointer;
+}
+.aside:hover{
+    color: orange;
+}
+
+
+
+
+.date{
+    height: 150px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.datet div{
+    display: flex;
+    align-items: center;
+}.datet div i{
+    padding: 3px;
+}
+
+
+
+
+
+

@@ -1,0 +1,112 @@
+*{
+   margin: 0;padding: 0;box-sizing: border-box;
+}
+
+body{
+   font-family: sans-serif;
+}
+
+header{
+   color: orange;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 30px;
+}
+header span{
+   color: black;
+}
+header h2{
+   font-weight: bold;
+}
+
+header ul{
+   display: flex;
+   list-style: none;
+}
+header li{
+   padding:0 20px;
+}
+header li a{
+   color: orange;
+   text-decoration: none;
+   position: relative;
+   transition: 0.5s;
+   font-weight: bold;
+}
+
+header li a::before{
+   content: '';
+   position: absolute;
+   background-color: black;
+   height: 4px;
+   top: 18px;
+   width: 0;
+   left: 8px;
+   border-radius: 30px;
+   transition: 0.5s;
+}
+header li a:hover::before, header a:hover{
+   width: 60%;
+   color: black;
+}
+
+
+/* -- partie du forums de la barre de recherche --- */
+header form{
+   box-shadow: 0 0 5px rgba(0, 0, 0, 0.456);
+   border-radius: 30px;
+   padding: 4px 0;
+   overflow: hidden;
+}
+header form input{
+   border: none;
+   padding: 3px 10px;
+   outline: none;
+}
+header form button{
+   border: none;
+   background: none;
+   padding: 5px;
+   cursor: pointer;
+}
+header form a{
+   color: black;
+   background-color: orange;
+   padding: 10px 13px;
+   border-radius: 50%;
+}
+
+
+
+.actif{
+   color: black;
+}
+
+
+
+/* partie du Menu */
+article{
+   padding: 20px 50px;
+}
+article h1{
+   font-size: 35px;
+   padding: 10px 0;
+   font-family: Trebuchet MS;
+}
+article h5{
+   color: grey;
+}
+.orange{color: orange;}
+.cmt{
+   border-radius: 5px;
+   background-color: orange;
+   border: none;
+   padding: 10px 25px;
+   display: block;
+   margin: 10px 0;
+   color: black;
+   font-weight: bold;
+   text-decoration: none;
+   width: 200px;
+}
