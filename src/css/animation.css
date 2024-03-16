@@ -1,0 +1,14 @@
+/* container */
+.container-card-text{
+    animation: one 1s ease-in-out;
+}
+@keyframes one {
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,209 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+:root{
+    --colorbase : rgb(255, 136, 0);
+    --font : rgba(0, 0, 0, 0.89);
+    --fontPolice : white;
+}
+body{
+    font-family: sans-serif;
+}
+/* ------------------------------------------- */
+@font-face {
+    font-family: kaushan;
+    src: url(../police/KaushanScript-Regular.ttf);
+}
+@font-face {
+    font-family: stylissa;
+    src: url(../police/Stylissa.ttf);
+}
+@font-face {
+    font-family: tenada;
+    src: url(../police/Tenada.ttf);
+}
+
+/* --------------------------------------------- */
+/* HEADER */
+header{
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.295);
+    display: flex;
+    justify-content: center;
+    background:  linear-gradient(to right,var(--font),var(--font),rgb(153, 83, 2));
+}
+.titre{
+    display: flex;
+    align-items: center;
+    font-family: kaushan;
+    text-align: center;
+    color: var(--fontPolice);
+}
+.colorbase{color: var(--colorbase);}
+header .fa{display: none;}
+
+/* ----------------------------------------- */
+
+.container{
+    background: linear-gradient(to right,#000000e5,#00000098,#ffffff00), url(../../img/background/black_and_blue_burger_95881_16x9.jpg);
+    width: 100%;
+    height: 450px;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.container-card-text{
+    padding:0 80px;
+}
+.container h3{
+    color: #ffffffbe;
+}
+.container h1{
+    font-size: 80px;font-family: tenada;
+}
+
+/* ----------------------------------------------- */
+section article{
+    padding: 20px;
+    background-color: var(--font);
+    color: var(--fontPolice);
+}
+.apropos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.apropos h1{
+    font-size: 50px;
+    font-family: tenada;
+}
+.apropos p{
+    font-weight: 500;
+    color: hsla(0, 0%, 100%, 0.596);
+}
+
+/* -------------------------------- */
+.nosproduit{   
+    background:  linear-gradient(to top,var(--font),var(--font),rgb(153, 83, 2));
+}
+.nosproduit h1{
+    text-align: center;
+    padding:30px 0;
+    color: hsla(0, 0%, 100%, 0.596);
+}
+#bold{
+    color: var(--fontPolice);
+}
+.produit-container{
+    padding: 0 70px;
+}
+
+.burger img{
+    width: 100%;
+}
+.burger{
+    box-shadow: 0 0 10px black;
+    border-radius: 20px;
+    width: 350px;
+    overflow: hidden;
+    display: inline-block;
+    margin: 15px 20px;
+}
+.about{
+    padding:10px 20px;  
+}
+
+.card-container{
+    width: 350px;
+    height: 300px;
+    position: relative;
+}
+.card{
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    overflow: hidden;
+}
+.card .content{
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    color: #e8e8e8;
+    text-shadow: 0 0 10px black;
+    background-color:rgba(255, 136, 0, 0.445);
+    padding: 20px 24px;
+    line-height: 1.5;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(50px);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+.card .content .heading{
+    font-size: 32px;
+    font-weight: 700;
+}
+.card:hover .content{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* -------------------------------- */
+
+.footer-container{
+    border-top: 1px solid hsla(0, 0%, 100%, 0.116);
+    padding:40px 40px;
+    display: flex;
+    justify-content: space-between;
+    background: var(--font);
+    color: var(--fontPolice);
+}
+.footer-content{
+    padding: 20px;
+    font-weight: 600;
+}
+.footer-content aside{
+    padding: 20px;
+}
+.footer-content aside span{
+    padding: 7px;
+    color: var(--colorbase);
+}
+
+.footer-footer{
+    background-color: var(--font);
+    color: var(--fontPolice);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+}
+.footer-footer p{
+    font-size: 13px;
+}
+.footer-footer a{
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+.politique{
+    padding: 20px;
+    background: var(--font);
+    color: hsla(0, 0%, 100%, 0.596);
+}

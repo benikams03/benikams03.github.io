@@ -1,0 +1,89 @@
+@media screen and (max-width:700px) {
+    
+    /* HEADER */
+    header{
+        padding: 10px;
+    }
+    header aside{
+        display: none;
+    }
+    header .fa{
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    /* CONTAINER */
+    .container-card-text{
+        padding: 0 30px;
+    }
+
+    /* CONTENUE */
+    .apropos{
+        display: flex;
+        flex-direction: column;
+    }
+    .produit-container{
+        padding: 0 15px;
+    }
+
+    /* FOOTER */
+    .footer-container{
+        padding:20px 15px 20px 15px;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-container img{
+        width: 380px;
+    }
+    
+    .footer-footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-footer p{
+        padding-top: 50px;
+    }
+}
+
+/* ------------------------------------ */
+@media screen and (max-width:400px) {
+    
+    /* HEADER */
+    header{
+        padding: 10px;
+    }
+
+    section article{
+        overflow: hidden;
+    }
+
+    /* CONTAINER */
+    .container-card-text{
+        padding: 0 20px;
+    }
+
+    /* CONTENUE */
+    .apropos{
+        display: flex;
+        flex-direction: column;
+    }
+    .produit-container{
+        padding: 0;
+    }
+    
+.burger{
+    margin: 15px 5px;
+}
+
+    /* FOOTER */
+    .footer-container{
+        padding:0 15px 20px 15px;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-container img{
+        width: 330px;
+    }
+
+}
